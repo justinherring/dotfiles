@@ -1,0 +1,16 @@
+{
+  "sleep": {
+    "prefix": "sleep",
+    "body": [
+      "await new Promise(r => setTimeout(r, 1000$1))$0",
+    ],
+    "description": "One-liner to sleep for a number of milliseconds"
+  },
+  "sleep function": {
+    "prefix": "sleepf",
+    "body": [
+      "const sleep = async (ms : number) => await new Promise(r => setTimeout(r, ms))$0",
+    ],
+    "description": "One-liner sleep function to sleep for a number of milliseconds"
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "eslint.execArgv": null,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "[vue]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "editor.renderWhitespace": "boundary",
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.codeLens": false,
+  "vue.codeLens.enabled": false,
+  "dotnet.codeLens.enableReferencesCodeLens": false,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "editor.tabSize": 2,
+  "editor.formatOnType": true,
+  "eslint.codeActionsOnSave.rules": null,
+  "vs-code-prettier-eslint.prettierLast": false,
+  "editor.formatOnSaveMode": "file",
+  "editor.formatOnPaste": true,
+  "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+  "eslint.format.enable": true,
+  "[csharp]": {
+    "editor.defaultFormatter": "ms-dotnettools.csharp",
+    "editor.tabSize": 4
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.minimap.enabled": false,
+  "terminal.integrated.cursorBlinking": true,
+  "todohighlight.include": [
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.html",
+    "**/*.php",
+    "**/*.css",
+    "**/*.scss",
+    "**/*.cs",
+    "**/*.vue"
+  ],
+  "todohighlight.keywords": ["NOTE:", "CHECKME:", "BUG:"],
+  "vue.server.maxFileSize": 30971520,
+  "editor.stickyScroll.enabled": false,
+  "gitlens.currentLine.enabled": false,
+  "gitlens.codeLens.enabled": false,
+  "dotnet.codeLens.enableTestsCodeLens": false,
+  "gitlens.codeLens.authors.enabled": false,
+  "diffEditor.renderSideBySide": true,
+  "editor.accessibilitySupport": "off",
+  "editor.rulers": [80, 130],
+  "diffEditor.ignoreTrimWhitespace": true
+}

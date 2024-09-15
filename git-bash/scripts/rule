@@ -1,0 +1,16 @@
+#!/bin/bash
+
+cols=$(tput cols)
+tens=$((cols / 10))
+
+for (( i=1 ; i <= tens ; i++ )); do
+    printf "% 10d" $((i))
+done
+
+printf "\n"
+
+for (( i=1 ; i <= cols ; i++ )); do
+    printf "%d" $((i % 10))
+done
+
+printf "\n"

@@ -1,0 +1,27 @@
+[alias]
+    st = status
+
+	cm = commit -m
+    cam = commit --amend -m
+    caml = "! git commit --amend -m \"$(git log --pretty=format:'%s' -1)\""
+
+    hist = log --pretty=format:'%C(yellow)%h%Creset %ad | %s' --date=short
+    hista = log --pretty=format:'%C(yellow)%h%Creset %ad | %s [%an]' --date=short
+    histw = log --pretty=format:'%C(yellow)%h%Creset | %<(66,trunc)%s | %ad' --date=human
+    histm = log --pretty=format:'%s'
+
+    changed = "! git diff --numstat \"$(git branch -l main master --format '%(refname:short)')\""
+
+    br = branch
+
+    co = checkout
+
+    mergedry = merge --no-commit --no-ff # dry run for a merge. use --abort after!
+
+    ed = config --global --edit
+    aliases = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+
+[url "git@github.com:"]
+	insteadOf = https://github.com/
+[diff]
+	algorithm = histogram
