@@ -18,3 +18,14 @@ installed.
 ### General
 
 * jq
+
+#### .NET
+
+* dotnet
+* dotnet ef-tools
+* reportgenerator
+
+#### JavaScript
+
+* npm-check
+
