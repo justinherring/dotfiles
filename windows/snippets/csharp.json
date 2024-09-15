@@ -1,0 +1,130 @@
+{
+  "New Class": {
+    "prefix": "class",
+    "body": [
+      "namespace ${RELATIVE_FILEPATH/[\\/\\\\]((\\w+)([\\/\\\\]\\w+)\\.cs)?/.$2/g};",
+      "",
+      "public class $TM_FILENAME_BASE",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Generates a new class"
+  },
+  "New Controller": {
+    "prefix": "controller",
+    "body": [
+      "using Microsoft.AspNetCore.Mvc;",
+      "",
+      "namespace ${RELATIVE_FILEPATH/[\\/\\\\]((\\w+)([\\/\\\\]\\w+)\\.cs)?/.$2/g};",
+      "",
+      "[ApiController]",
+      "[Route(\"api/[controller]\")]",
+      "public class $TM_FILENAME_BASE : ControllerBase",
+      "{",
+      "    $0",
+      "}"
+    ],
+    "description": "Generates a new class"
+  },
+  "New Test Fixture": {
+    "prefix": ["ftest", "testf"],
+    "body": [
+      "using NUnit.Framework;",
+      "",
+      "namespace $1${RELATIVE_FILEPATH/[\\/\\\\]((\\w+)([\\/\\\\]\\w+)\\.cs)?/.$2/g};",
+      "",
+      "[TestFixture]",
+      "public class $TM_FILENAME_BASE",
+      "{",
+      "    [SetUp]",
+      "    public void SetUp()",
+      "    {",
+      "        $2",
+      "    }",
+      "    ",
+      "    [TearDown]",
+      "    public void TearDown()",
+      "    {",
+      "        $3",
+      "    }",
+      "}"
+    ],
+    "description": "Generates a new test fixture class"
+  },
+  "New Test Fixture With Mock Repository": {
+    "prefix": ["fmtest", "testfm"],
+    "body": [
+      "using Moq;",
+      "using NUnit.Framework;",
+      "",
+      "namespace $1${RELATIVE_FILEPATH/[\\/\\\\]((\\w+)([\\/\\\\]\\w+)\\.cs)?/.$2/g};",
+      "",
+      "[TestFixture]",
+      "public class $TM_FILENAME_BASE",
+      "{",
+      "    private MockRepository _mockRepository;",
+      "",
+      "    [SetUp]",
+      "    public void SetUp()",
+      "    {",
+      "        _mockRepository = new MockRepository(MockBehavior.Strict);",
+      "        $2",
+      "    }",
+      "    ",
+      "    [TearDown]",
+      "    public void TearDown()",
+      "    {",
+      "        _mockRepository.VerifyAll();",
+      "        $3",
+      "    }",
+      "}"
+    ],
+    "description": "Generates a new test fixture class"
+  },
+  "New Test": {
+    "prefix": "test",
+    "body": ["[Test]", "public void Test_$1()", "{", "    throw new NotImplementedException();$0", "}"],
+    "description": "Generates a new NUnit test case"
+  },
+  "New Async Test": {
+    "prefix": ["atest", "testa"],
+    "body": [
+      "[Test]", 
+      "public async Task Test_$1()", 
+      "{", 
+      "    await Task.Delay(0);",
+      "    throw new NotImplementedException();$0", 
+      "}"
+    ],
+    "description": "Generates a new NUnit async test case"
+  },
+  "New Controller Test": {
+    "prefix": ["ctest"],
+    "body": [
+      "[Test]", 
+      "public async Task Test_$1()", 
+      "{",
+      "    PathAndQuery path = new PathAndQuery(\"/api/$2\");",
+      "",
+      "    HttpResponseMessage response = await Client.Get$3Async(path.Value);",
+      "    string content = await response.Content.ReadAsStringAsync();",
+      "    Assert.AreEqual(HttpStatusCode.OK$4, response.StatusCode);",
+      "",
+      "    throw new NotImplementedException();$0", 
+      "}"
+    ],
+    "description": "Generates a new NUnit test case for a controller endpoint"
+  },
+  "Console.WriteLine": {
+    "prefix": "cw",
+    "body": ["Console.WriteLine($0);"],
+    "description": "Better `cw` snippet (omits `System.`)"
+  },
+  "Console.WriteLine with Interpolated String": {
+    "prefix": "cws",
+    "body": ["Console.WriteLine($\"$0\");"],
+    "description": "Better `cw` snippet that puts cursor in the middle of an interpolated string"
+  }
+
+}
