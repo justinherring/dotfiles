@@ -1,7 +1,9 @@
 [alias]
     st = status
 
-	cm = commit -m
+    ar = add --renormalize
+
+    cm = commit -m
     cam = commit --amend -m
     caml = "! git commit --amend -m \"$(git log --pretty=format:'%s' -1)\""
 
@@ -13,15 +15,22 @@
     changed = "! git diff --numstat \"$(git branch -l main master --format '%(refname:short)')\""
 
     br = branch
+    bb = branch -a -vv
 
     co = checkout
 
     mergedry = merge --no-commit --no-ff # dry run for a merge. use --abort after!
 
+    age = for-each-ref --format '%(authordate:iso) %(refname:short)' --sort=-authordate refs/remotes refs/heads
+    root = rev-parse --show-toplevel
+    who = ! git config -l | grep -E '^user\\.(name|email)'
+
     ed = config --global --edit
     aliases = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+    configd = config --list --show-origin
+    cp = cherry-pick
 
 [url "git@github.com:"]
-	insteadOf = https://github.com/
+    insteadOf = https://github.com/
 [diff]
-	algorithm = histogram
+    algorithm = histogram
