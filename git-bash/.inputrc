@@ -1,1 +1,22 @@
+# this is the config file for Readline, a GNU library used by Bash (and more)
+# to alter line-editing 
+
+# to reload the inputrc while editing it, use Ctrl+x Ctrl+r
+
+# include top level inputrc, if not included, you lose some default behaviors
+$include /etc/inputrc
+
+# turn off audible/flashing bell
 set bell-style none
+
+# ignore case when autocompleting
+set completion-ignore-case on
+# allow - and _ to be used as equivalent
+set completion-map-case on
+
+# display all matches on first <Tab> instead of second
+set show-all-if-ambiguous on
+
+# search history based on what you've typed in
+"\e[A": history-search-backward
+"\e[B": history-search-forward
