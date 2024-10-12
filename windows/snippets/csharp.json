@@ -84,7 +84,14 @@
   },
   "New Test": {
     "prefix": "test",
-    "body": ["[Test]", "public void Test_$1()", "{", "    throw new NotImplementedException();$0", "}"],
+    "body": [
+      "[Test]", 
+      "public void Test_$1()", 
+      "{", 
+      "    // TODO: implement",
+      "    throw new NotImplementedException();$0", 
+      "}"
+    ],
     "description": "Generates a new NUnit test case"
   },
   "New Async Test": {
@@ -93,7 +100,8 @@
       "[Test]", 
       "public async Task Test_$1()", 
       "{", 
-      "    await Task.Delay(0);",
+      "    // TODO: implement",
+      "    await Task.CompletedTask;",
       "    throw new NotImplementedException();$0", 
       "}"
     ],
@@ -105,6 +113,8 @@
       "[Test]", 
       "public async Task Test_$1()", 
       "{",
+      "    // TODO: implement Test_$1",
+      "",
       "    PathAndQuery path = new PathAndQuery(\"/api/$2\");",
       "",
       "    HttpResponseMessage response = await Client.Get$3Async(path.Value);",
@@ -125,6 +135,18 @@
     "prefix": "cws",
     "body": ["Console.WriteLine($\"$0\");"],
     "description": "Better `cw` snippet that puts cursor in the middle of an interpolated string"
+  },
+  "Throw NotImplementedException": {
+    "prefix": "tni",
+    "body": "throw new NotImplementedException();",
+  },
+  "Throw NotImplementedException with Dummy Async": {
+    "prefix": "atni",
+    "body": [
+      "await Task.CompletedTask;",
+      "throw new NotImplementedException();",
+    ],
+    "description": "Throw a NotImplementedException after awaiting Task.CompletedTask;"
   }
 
 }
