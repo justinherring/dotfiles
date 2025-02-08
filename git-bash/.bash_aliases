@@ -1,3 +1,6 @@
+# general                                                                                             <
+alias reload="source ~/.bashrc && echo reloaded ~/.bashrc" 
+
 # overrides
 alias diff="diff -y --color -W $(tput cols)"
 alias less="less -F"
@@ -7,6 +10,7 @@ alias mkdir="mkdir -pv"
 alias fe="explorer.exe"
 alias ff="find"
 alias ttcsv="sed 's/\t/,/g; s/,$//'" # quick and very dirty way to convert TSV to CSV
+alias la="ls -A"
 
 # time
 alias now="date -R"
@@ -15,6 +19,7 @@ alias nowb="now; nowu"
 
 # .NET
 alias dr="dotnet run"
+alias drp="dotnet run --project"
 alias db="dotnet build"
 alias dt="dotnet test --nologo -l 'console;verbosity=normal'"
 alias dtf="dt --filter"
