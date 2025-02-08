@@ -5,7 +5,7 @@
 
     cm = commit -m
     cam = commit --amend -m
-    caml = "! git commit --amend -m \"$(git log --pretty=format:'%s' -1)\""
+    caml = commit --amend --no-edit
 
     hist = log --pretty=format:'%C(yellow)%h%Creset %ad | %s' --date=short
     hista = log --pretty=format:'%C(yellow)%h%Creset %ad | %s [%an]' --date=short
