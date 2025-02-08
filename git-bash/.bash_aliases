@@ -7,6 +7,7 @@ alias mkdir="mkdir -pv"
 alias fe="explorer.exe"
 alias ff="find"
 alias ttcsv="sed 's/\t/,/g; s/,$//'" # quick and very dirty way to convert TSV to CSV
+alias la="la"
 
 # time
 alias now="date -R"

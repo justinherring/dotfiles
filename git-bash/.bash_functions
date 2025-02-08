@@ -72,3 +72,23 @@ function repeat () {
 }
 export -f repeat
 
+# get character-length of a string                
+function chlen() {                                
+    python -c "print(len(\"$@\"))"                
+}                                                 
+                                                  
+# get byte-length of string                       
+function bytelen() {                              
+    python -c "print(len(\"$@\".encode('utf-8')))"
+}                                                 
+
+# generate a diffstat that makes more sense for me
+function git_smart_diffstat() {
+    local revision="$1"
+    
+    # the **/Migrations/**/* ignores Entity Framework Core migrations in C#
+    # projects
+    git diff "$revision" --stat -- ':(glob,exclude)**/Migrations/**/*'
+}
+export -f git_smart_diffstat
+
