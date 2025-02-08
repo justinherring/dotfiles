@@ -11,3 +11,7 @@ I think I'll end up putting all the install scripts in the `bin` folder, so you
 can just run `dotfiles/bin/<install-script>` and then everything will be
 installed.
 
+## Local files
+
+I'd like to notate files that are different locally and then ignore them, maybe
+using, e.g., `.gitignore.local` or something
