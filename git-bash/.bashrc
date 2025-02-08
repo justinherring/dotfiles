@@ -12,6 +12,9 @@ HISTCONTROL="ignoreboth"
 HISTTIMEFORMAT="%F %T "
 export HISTIGNORE="&:[ ]*:exit:ls:history:clear"
 
+# append last command to history
+PROMPT_COMMAND="history -a;$PROMPT_COMMAND"
+
 # attempt to spell-check directories when cd-ing/auto-completing
 shopt -s cdspell
 shopt -s dirspell

@@ -18,6 +18,7 @@ installed.
 ### General
 
 * jq
+* gh
 
 #### .NET
 

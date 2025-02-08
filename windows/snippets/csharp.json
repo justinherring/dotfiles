@@ -147,6 +147,12 @@
       "throw new NotImplementedException();",
     ],
     "description": "Throw a NotImplementedException after awaiting Task.CompletedTask;"
+  },
+  "UUID": {
+    "prefix": "uuid",
+    "body": [
+      "\"$UUID\"",
+    ],
+    "description": "Generates a random UUID as a string"
   }
-
 }
