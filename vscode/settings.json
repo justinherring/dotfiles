@@ -1,24 +1,24 @@
 {
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
   "[html]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "eslint.execArgv": null,
   "eslint.workingDirectories": [{ "mode": "auto" }],
   "terminal.integrated.defaultProfile.windows": "Git Bash",
   "[vue]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   },
   "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
+    "editor.defaultFormatter": "vscode.json-language-features",
   },
   "files.autoSave": "onFocusChange",
   "editor.formatOnSave": true,
   "editor.renderWhitespace": "boundary",
   "[jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "editor.codeLens": false,
   "vue.codeLens.enabled": false,
@@ -35,7 +35,7 @@
   "eslint.format.enable": true,
   "[csharp]": {
     "editor.defaultFormatter": "ms-dotnettools.csharp",
-    "editor.tabSize": 4
+    "editor.tabSize": 4,
   },
   "security.workspace.trust.untrustedFiles": "open",
   "editor.minimap.enabled": false,
@@ -50,7 +50,7 @@
     "**/*.css",
     "**/*.scss",
     "**/*.cs",
-    "**/*.vue"
+    "**/*.vue",
   ],
   "todohighlight.keywords": ["NOTE:", "CHECKME:", "BUG:"],
   "vue.server.maxFileSize": 30971520,
@@ -62,5 +62,10 @@
   "diffEditor.renderSideBySide": true,
   "editor.accessibilitySupport": "off",
   "editor.rulers": [80, 130],
-  "diffEditor.ignoreTrimWhitespace": true
+  "diffEditor.ignoreTrimWhitespace": true,
+  "dotnetAcquisitionExtension.enableTelemetry": false,
+  "dotnetAcquisitionExtension.installTimeoutValue": 300,
+  "workbench.colorTheme": "Dark Modern",
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
 }

@@ -28,7 +28,10 @@
     "description": "Generates a new class"
   },
   "New Test Fixture": {
-    "prefix": ["ftest", "testf"],
+    "prefix": [
+      "ftest",
+      "testf"
+    ],
     "body": [
       "using NUnit.Framework;",
       "",
@@ -53,7 +56,10 @@
     "description": "Generates a new test fixture class"
   },
   "New Test Fixture With Mock Repository": {
-    "prefix": ["fmtest", "testfm"],
+    "prefix": [
+      "fmtest",
+      "testfm"
+    ],
     "body": [
       "using Moq;",
       "using NUnit.Framework;",
@@ -85,33 +91,38 @@
   "New Test": {
     "prefix": "test",
     "body": [
-      "[Test]", 
-      "public void Test_$1()", 
-      "{", 
+      "[Test]",
+      "public void Test_$1()",
+      "{",
       "    // TODO: implement",
-      "    throw new NotImplementedException();$0", 
+      "    throw new NotImplementedException();$0",
       "}"
     ],
     "description": "Generates a new NUnit test case"
   },
   "New Async Test": {
-    "prefix": ["atest", "testa"],
+    "prefix": [
+      "atest",
+      "testa"
+    ],
     "body": [
-      "[Test]", 
-      "public async Task Test_$1()", 
-      "{", 
+      "[Test]",
+      "public async Task Test_$1()",
+      "{",
       "    // TODO: implement",
       "    await Task.CompletedTask;",
-      "    throw new NotImplementedException();$0", 
+      "    throw new NotImplementedException();$0",
       "}"
     ],
     "description": "Generates a new NUnit async test case"
   },
   "New Controller Test": {
-    "prefix": ["ctest"],
+    "prefix": [
+      "ctest"
+    ],
     "body": [
-      "[Test]", 
-      "public async Task Test_$1()", 
+      "[Test]",
+      "public async Task Test_$1()",
       "{",
       "    // TODO: implement Test_$1",
       "",
@@ -121,38 +132,48 @@
       "    string content = await response.Content.ReadAsStringAsync();",
       "    Assert.AreEqual(HttpStatusCode.OK$4, response.StatusCode);",
       "",
-      "    throw new NotImplementedException();$0", 
+      "    throw new NotImplementedException();$0",
       "}"
     ],
     "description": "Generates a new NUnit test case for a controller endpoint"
   },
   "Console.WriteLine": {
     "prefix": "cw",
-    "body": ["Console.WriteLine($0);"],
+    "body": [
+      "Console.WriteLine($0);"
+    ],
     "description": "Better `cw` snippet (omits `System.`)"
   },
   "Console.WriteLine with Interpolated String": {
     "prefix": "cws",
-    "body": ["Console.WriteLine($\"$0\");"],
+    "body": [
+      "Console.WriteLine($\"$0\");"
+    ],
     "description": "Better `cw` snippet that puts cursor in the middle of an interpolated string"
   },
   "Throw NotImplementedException": {
     "prefix": "tni",
-    "body": "throw new NotImplementedException();",
+    "body": "throw new NotImplementedException();"
   },
   "Throw NotImplementedException with Dummy Async": {
     "prefix": "atni",
     "body": [
       "await Task.CompletedTask;",
-      "throw new NotImplementedException();",
+      "throw new NotImplementedException();"
     ],
     "description": "Throw a NotImplementedException after awaiting Task.CompletedTask;"
   },
   "UUID": {
     "prefix": "uuid",
     "body": [
-      "\"$UUID\"",
+      "\"$UUID\""
     ],
     "description": "Generates a random UUID as a string"
+  },
+  "Namespace": {
+    "prefix": "nsp",
+    "body": [
+      "namespace ${RELATIVE_FILEPATH/[\\/\\\\]((\\w+)([\\/\\\\]\\w+)\\.cs)?/.$2/g};"
+    ]
   }
 }
